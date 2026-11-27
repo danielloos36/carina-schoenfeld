@@ -57,3 +57,15 @@ python3 -m http.server 8000   # dann http://localhost:8000
 ## Deployment
 
 Alle Dateien per FTP/SFTP in das Webroot des Hosters (STRATO) laden. In `kontakt.php` ggf. `SENDER` auf eine existierende Adresse der Domain setzen.
+
+## Passwortgeschützte Vorschau (`docs/`)
+
+`docs/` ist eine **generierte**, verschlüsselte Kopie der Seite für die Kunden-Vorschau (GitHub Pages: Branch `main`, Ordner `/docs`; Netlify: Publish directory `docs`).
+Nie direkt in `docs/` arbeiten. Nach jeder Änderung neu bauen:
+
+```
+PREVIEW_PASSWORD='…' node scripts/build-preview.mjs
+```
+
+Das Passwort wird nirgends im Repo gespeichert. HTML ist AES-verschlüsselt und hat `noindex`; Bilder/PDFs in `docs/assets` sind nicht verschlüsselt.
+Für den Livegang auf der echten Domain die Dateien aus dem Hauptordner hochladen (ohne `docs/`, `scripts/`).
