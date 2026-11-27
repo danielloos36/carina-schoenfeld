@@ -1,0 +1,61 @@
+# ---------------------------------------------------------------
+# Apache-Konfiguration (STRATO & andere Standard-Hoster)
+# ---------------------------------------------------------------
+
+Options -Indexes
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # HTTPS & ohne www erzwingen
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://schoenfeld-psychotherapie.de%{REQUEST_URI} [L,R=301,NE]
+
+  # Alte Unterseiten (WordPress) dauerhaft auf die Abschnitte der One-Page umleiten
+  RewriteRule ^ueber-mich/?$          /#ueber-mich       [R=301,L,NE]
+  RewriteRule ^therapieangebot/?$     /#therapieangebot  [R=301,L,NE]
+  RewriteRule ^ablauf-and-kosten/?$   /#ablauf           [R=301,L,NE]
+  RewriteRule ^im-notfall/?$          /#notfall          [R=301,L,NE]
+  RewriteRule ^terminbuchung/?$       /#kontakt          [R=301,L,NE]
+  RewriteRule ^download/?$            /#unterlagen       [R=301,L,NE]
+  RewriteRule ^startseite-alt/?$      /                  [R=301,L]
+
+  # Alte PDF-Links
+  RewriteRule ^wp-content/uploads/.*/Anamnesebogen\.pdf$          /assets/downloads/anamnesebogen.pdf [R=301,L]
+  RewriteRule ^wp-content/uploads/.*/GOP_Infotabelle.*\.pdf$      /assets/downloads/gebuehrenordnung-psychotherapeuten-gop.pdf [R=301,L]
+  RewriteRule ^wp-content/uploads/.*/Datenschutz\.pdf$            /assets/downloads/einverstaendnis-datenverarbeitung.pdf [R=301,L]
+  RewriteRule ^wp-content/uploads/.*/Stundenausfallregelung\.pdf$ /assets/downloads/regelung-stundenausfall.pdf [R=301,L]
+</IfModule>
+
+# Sicherheits-Header
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+</IfModule>
+
+# Komprimierung
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/json text/plain application/xml
+</IfModule>
+
+# Browser-Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 week"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/pdf "access plus 1 month"
+</IfModule>
+
+AddType font/woff2 .woff2
+AddType image/webp .webp
