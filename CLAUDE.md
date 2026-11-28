@@ -17,7 +17,7 @@ assets/css/styles.css         ← Design; Farben/Abstände als Variablen in :roo
 assets/js/main.js             ← Menü, Akkordeon-Anker, Formular, Einblendungen
 assets/img/                   ← Fotos (WebP + JPG in 440/660/860 px)
 assets/illustrations/         ← handgezeichnete SVG-Illustrationen + Favicon
-assets/fonts/                 ← Fraunces & Figtree, lokal gehostet (DSGVO: kein Google-CDN)
+assets/fonts/                 ← EB Garamond (Überschriften) & DM Sans (Text), lokal gehostet (DSGVO: kein Google-CDN)
 assets/downloads/             ← PDFs für Patient*innen
 ```
 
@@ -41,10 +41,17 @@ Jeder Abschnitt ist mit einem Kommentar `<!-- ============ NAME ============ -->
 - Keine externen Skripte, Fonts, Karten oder Tracker einbinden. Sonst wird ein Cookie-Banner nötig und die Datenschutzerklärung muss angepasst werden.
 - **Nur relative Pfade** (`assets/…`, in Unterordnern `../assets/…`), nie `/assets/…`, damit die Seite auch unter GitHub Pages im Unterordner funktioniert.
 
+## Designsprache
+
+Wunsch der Kundin: **clean, ruhig, minimalistisch, Naturtöne & Materialien (Holz, Stein)**, nicht verspielt, nicht bunt, kein „Vanille“-Creme.
+- Farben nur über die Variablen in `:root` (Steinweiß, Stein, Holz/Walnuss, Moos). Keine Pastellfarben, keine neuen Akzentfarben.
+- Haarlinien statt Schatten, kleine Radien (6px, Buttons 3px), viel Weißraum. Keine Wellen, Blobs, Kursiv- oder Pinsel-Effekte.
+- Rostrot (`--alert`) nur für den Notfall-Bereich.
+
 ## Illustrationsstil
 
-Tuschelinie `#2b3533`, `stroke-width` 2–2.4, runde Enden; Pastellflächen leicht versetzt dahinter (Risographie-Look, `transform="translate(3–6 3–5)"`).
-Palette: Salbei `#dbe8de`/`#a9c7b4`, Pfirsich `#f7dccd`/`#f2c7b3`, Lavendel `#e4def0`, Butter `#f4e6b8`, Himmel `#d7e7ee`.
+Tuschelinie `#2b3533`, `stroke-width` 2–2.4, runde Enden; Flächen leicht versetzt dahinter (`transform="translate(3–6 3–5)"`).
+Flächenfarben nur aus Stein/Holz/Moos: `#e7e3dc`, `#ddd8cf`, `#e4e1db`, `#dcdcd6`, `#e6dccf`, `#e6dccb`, `#d8c8b4`, Pflanzen `#b8b59d`.
 Kein Wackel-Filter (`feDisplacementMap`): Er zerfasert die Linien auf Retina-Displays.
 
 ## Lokal ansehen

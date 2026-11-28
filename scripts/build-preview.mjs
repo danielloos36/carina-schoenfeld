@@ -49,19 +49,19 @@ ${NOINDEX}
 <title>Vorschau – geschützt</title>
 <link rel="icon" href="${prefix}assets/illustrations/favicon.svg" type="image/svg+xml">
 <style>
-@font-face{font-family:Fraunces;src:url(${prefix}assets/fonts/fraunces.woff2) format("woff2");font-weight:300 700;font-display:swap}
-@font-face{font-family:Figtree;src:url(${prefix}assets/fonts/figtree.woff2) format("woff2");font-weight:300 800;font-display:swap}
+@font-face{font-family:"EB Garamond";src:url(${prefix}assets/fonts/eb-garamond.woff2) format("woff2");font-weight:400 800;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(${prefix}assets/fonts/dm-sans.woff2) format("woff2");font-weight:100 1000;font-display:swap}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:#fbf7f1;color:#26302e;font-family:Figtree,system-ui,sans-serif;padding:16px}
-.box{width:100%;max-width:400px;background:#fff;border-radius:24px;padding:36px 32px;box-shadow:0 1px 2px rgba(38,48,46,.04),0 12px 40px -16px rgba(38,48,46,.2);text-align:center}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f5f3ef;color:#26302e;font-family:"DM Sans",system-ui,sans-serif;padding:16px}
+.box{width:100%;max-width:400px;background:#fff;border-radius:6px;padding:40px 32px;border:1px solid #d9d3c9;text-align:center}
 .box img{width:56px;height:56px;margin:0 auto 18px;display:block}
-h1{font-family:Fraunces,Georgia,serif;font-weight:450;font-size:1.7rem;margin:0 0 6px}
+h1{font-family:"EB Garamond",Georgia,serif;font-weight:400;font-size:2rem;margin:0 0 6px}
 p{margin:0 0 22px;color:#56625e;line-height:1.5}
-input{width:100%;font:inherit;padding:13px 16px;border-radius:12px;border:1.5px solid #e7e0d5;background:#fbf7f1;color:inherit}
-input:focus{outline:none;border-color:#3f6656;background:#fff}
-button{margin-top:12px;width:100%;font:inherit;font-weight:600;padding:13px;border:0;border-radius:999px;background:#3f6656;color:#fff;cursor:pointer}
-button:hover{background:#335446}
-.err{color:#a4533a;font-size:.92rem;min-height:1.4em;margin:10px 0 0}
+input{width:100%;font:inherit;padding:13px 16px;border-radius:3px;border:1px solid #d9d3c9;background:#f5f3ef;color:inherit}
+input:focus{outline:none;border-color:#5b4a3c;background:#fff}
+button{margin-top:12px;width:100%;font:inherit;font-weight:600;padding:13px;border:0;border-radius:3px;background:#5b4a3c;color:#fff;cursor:pointer}
+button:hover{background:#46392e}
+.err{color:#8a4b38;font-size:.92rem;min-height:1.4em;margin:10px 0 0}
 </style>
 </head>
 <body>

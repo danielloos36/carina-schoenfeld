@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" width="360" height="240">
   <defs>
     <g id="chair">
-      <path d="M54 98C53 80 63 74 80 74l40 1c14 1 20 9 19 23l-1 82H54Z" fill="#c9dccf"/>
+      <path d="M54 98C53 80 63 74 80 74l40 1c14 1 20 9 19 23l-1 82H54Z" fill="#ddd8cf"/>
       <g stroke="#2b3533" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path d="M50 150 48 96c-1-18 10-26 28-26l40 1c14 1 20 9 20 23l-1 56"/>
         <path d="M42 150c0-8 6-12 16-12l66 1c10 0 16 5 16 13l-1 16c0 5-4 8-9 8H50c-5 0-8-4-8-9Z"/>
@@ -12,24 +12,24 @@
       </g>
     </g>
   </defs>
-  <path d="M70 60c50-40 160-36 220-2 50 28 56 102 10 132-50 32-180 34-234 4C20 168 24 92 70 60Z" fill="#f7dccd"/>
+  <path d="M70 60c50-40 160-36 220-2 50 28 56 102 10 132-50 32-180 34-234 4C20 168 24 92 70 60Z" fill="#e6dccf"/>
   <g>
     <use href="#chair"/>
     <use href="#chair" transform="translate(360 0) scale(-1 1)"/>
     <g stroke="#2b3533" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M156 150c8-4 40-4 48 0-8 4-40 4-48 0Z" fill="#f4e6b8"/>
+      <path d="M156 150c8-4 40-4 48 0-8 4-40 4-48 0Z" fill="#e6dccb"/>
       <path d="M180 153v51M168 204c6-3 18-3 24 0"/>
-      <path d="M170 148l2-12h14l2 12" fill="#fbf7f1"/>
+      <path d="M170 148l2-12h14l2 12" fill="#f5f3ef"/>
       <path d="M187 139c7-1 7 7 0 7"/>
       <path d="M176 129c-4-6 4-10 0-17M183 127c-3-6 4-10 1-16" stroke-width="1.8"/>
       <path d="M20 206c60-3 120 2 180-1 50-2 100 2 140-1"/>
     </g>
     <g stroke="#2b3533" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path d="M30 204c-2-36 4-76-4-110"/>
-      <path d="M29 170c-10-2-18-10-18-20 10 0 18 8 18 20Z" fill="#a9c7b4"/>
-      <path d="M30 150c10-2 16-12 14-22-10 2-16 12-14 22Z" fill="#a9c7b4"/>
-      <path d="M28 128c-10-3-16-12-14-22 10 2 16 12 14 22Z" fill="#a9c7b4"/>
-      <path d="M27 108c8-4 12-14 8-22-8 4-12 14-8 22Z" fill="#a9c7b4"/>
+      <path d="M29 170c-10-2-18-10-18-20 10 0 18 8 18 20Z" fill="#b8b59d"/>
+      <path d="M30 150c10-2 16-12 14-22-10 2-16 12-14 22Z" fill="#b8b59d"/>
+      <path d="M28 128c-10-3-16-12-14-22 10 2 16 12 14 22Z" fill="#b8b59d"/>
+      <path d="M27 108c8-4 12-14 8-22-8 4-12 14-8 22Z" fill="#b8b59d"/>
     </g>
   </g>
 </svg>
